@@ -8,7 +8,6 @@ test('Resume update', async ({ page }) => {
     await page.getByPlaceholder("Enter your active Email ID / Username").fill('ankursharma2301@gmail.com');
     await page.getByPlaceholder("Enter your password").fill("Admin@1234");
     await page.locator(".btn-primary.loginButton").click();
-    await page.pause();
     await page.getByText("View Profile").click();
     await expect(page).toHaveURL("https://www.naukri.com/mnjuser/profile")
     const resumeFilePath = path.resolve('uploads/Ankur_Sharma_8_years.pdf');
